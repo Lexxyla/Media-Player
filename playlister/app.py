@@ -8,7 +8,7 @@ app = Flask(__name__)
 #	return render_template('home.html', msg='Hello, world!')
 
 playlists = [
-		{ 'title': 'Cat Videos', 'description': 'Cats acting weird' },
+		{ 'title': 'Choba Playlist', 'description': 'Select a song' },
 		{ 'title': '80\'s Music', 'description': 'Don\'t stop believing!' }
 		]
 
