@@ -3,11 +3,6 @@
 
 {% block content %}
 <form method='POST' action='/playlists'>
-<!-- templates/playlists_new.html -->
-{% extends 'base.html' %}
-
-{% block content %}
-<form method='POST' action='/playlists'>
     <!-- Add this line instead of all the form code -->
     {% include 'partials/playlists_form.html' %}
 
