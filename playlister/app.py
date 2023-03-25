@@ -16,6 +16,12 @@ def video_url_creator(id_lst):
         video = 'https://youtube.com/embed/' + vid_id
         videos.append(video)
     return videos
+
+def clear_data():
+    meta = db.metadata
+    for table in reversed(meta.sorted_tables):
+        db.session.execute(table.delete())
+    db.session.commit()
     
 #@app.route('/')
 #def index():
@@ -26,6 +32,10 @@ def video_url_creator(id_lst):
 #		{ 'title': 'Choba Playlist', 'description': 'Select a song' },
 #		{ 'title': '80\'s Music', 'description': 'Don\'t stop believing!' }
 #		]
+@app.route('/clear')
+def clear():
+    clear_data()
+    return redirect('/')
 
 @app.route('/')
 def playlists_index():
