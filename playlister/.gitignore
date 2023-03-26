@@ -2,3 +2,9 @@ env
 chenv
 __pycache__
 .DS_Store
+firebase.json 
+firebase-debug.log 
+.firebaserc database.rules.json 
+empty.py 
+firestore.indexes.json 
+firestore.rules functions/
