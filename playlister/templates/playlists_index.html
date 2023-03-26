@@ -5,11 +5,12 @@
 <h1>Playlists</h1>
 
 <!-- Add the following classes to their appropriate elements  -->
-<div class='row'>
+<div class='row card'>
     {% for playlist in playlists %}
-        <div class='col-md-3'>
-            <h2><a href='/playlists/{{ playlist._id }}'>{{ playlist.title }}</a></h2>
-            <small>{{ playlist.description }}</small>
+        <div class='col-md-3' card-body>
+            <h2 class="card-title"><a href='/playlists/{{ playlist._id }}'>{{ playlist.title }}</a></h2>
+            <small class="card-text">{{ playlist.description }}</small>
+<!--             <small class="card-text">{{ playlist.rating }} star rating</small>  -->
         </div>
     {% endfor %}
 </div>

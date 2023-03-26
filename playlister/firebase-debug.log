@@ -1,0 +1,26 @@
+[debug] [2023-03-26T00:00:55.945Z] ----------------------------------------------------------------------
+[debug] [2023-03-26T00:00:55.961Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2023-03-26T00:00:55.965Z] CLI Version:   11.25.1
+[debug] [2023-03-26T00:00:55.966Z] Platform:      linux
+[debug] [2023-03-26T00:00:55.967Z] Node Version:  v16.19.1
+[debug] [2023-03-26T00:00:55.989Z] Time:          Sun Mar 26 2023 01:00:55 GMT+0100 (West Africa Standard Time)
+[debug] [2023-03-26T00:00:55.991Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-26T00:00:56.956Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-26T00:00:56.959Z] > authorizing via signed-in user (adefolajua@gmail.com)
+[debug] [2023-03-26T00:00:56.960Z] [iam] checking project choba-video-playlister for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-03-26T00:00:56.973Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/choba-video-playlister:testIamPermissions [none]
+[debug] [2023-03-26T00:00:56.974Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/choba-video-playlister:testIamPermissions x-goog-quota-user=projects/choba-video-playlister
+[debug] [2023-03-26T00:00:56.974Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/choba-video-playlister:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-03-26T00:01:07.077Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/choba-video-playlister:testIamPermissions
+[debug] [2023-03-26T00:01:07.081Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/choba-video-playlister/serviceAccounts/choba-video-playlister@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-03-26T00:01:07.082Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/choba-video-playlister/serviceAccounts/choba-video-playlister@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-03-26T00:01:17.104Z] [functions] service account IAM check errored, deploy may fail:Failed to make request to https://iam.googleapis.com/v1/projects/choba-video-playlister/serviceAccounts/choba-video-playlister@appspot.gserviceaccount.com:testIamPermissions {"name":"FirebaseError","children":[],"exit":1,"message":"Failed to make request to https://iam.googleapis.com/v1/projects/choba-video-playlister/serviceAccounts/choba-video-playlister@appspot.gserviceaccount.com:testIamPermissions","original":{"message":"request to https://iam.googleapis.com/v1/projects/choba-video-playlister/serviceAccounts/choba-video-playlister@appspot.gserviceaccount.com:testIamPermissions failed, reason: getaddrinfo EAI_AGAIN iam.googleapis.com","type":"system","errno":"EAI_AGAIN","code":"EAI_AGAIN"},"status":500}
+[debug] [2023-03-26T00:01:17.111Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/choba-video-playlister [none]
+[debug] [2023-03-26T00:01:27.132Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/choba-video-playlister
+[debug] [2023-03-26T00:01:32.160Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
