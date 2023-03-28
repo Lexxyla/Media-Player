@@ -4,8 +4,7 @@ from bson.objectid import ObjectId
 import os
 from datetime import datetime
 
-# update the client, db, and playlists assignments to the following,
-# including the new host variable
+
 host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/Playlister')
 client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.get_default_database()
@@ -22,25 +21,6 @@ def video_url_creator(id_lst):
         videos.append(video)
     return videos
 
-def clear_data():
-    meta = db.metadata
-    for table in reversed(meta.sorted_tables):
-        db.session.execute(table.delete())
-    db.session.commit()
-    
-#@app.route('/')
-#def index():
-#	"""Return homepage."""
-#	return render_template('home.html', msg='Hello, world!')
-
-# playlists = [
-#		{ 'title': 'Choba Playlist', 'description': 'Select a song' },
-#		{ 'title': '80\'s Music', 'description': 'Don\'t stop believing!' }
-#		]
-@app.route('/clear')
-def clear():
-    clear_data()
-    return redirect('/')
 
 @app.route('/')
 def playlists_index():
